@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "ejs": "^3.1.6",
-    "mysql": "^8.0.25"
+    "mysql": "^5.7.0"
   }
 }
 
