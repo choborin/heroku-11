@@ -20,7 +20,6 @@ services:
       - choborin_net
     volumes:
       - ./src:/var/nodeapp
-      - /var/nodeapp/node_modules
     ports:
       - 8080:3000
     environment:
