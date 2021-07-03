@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('public'));
 
 const connection = mysql.createConnection({
-  host: 'choborin_mysql',
+  host: 'db',
   user: 'choborin',
   password: 'beckham7',
   database: 'chobodb'
