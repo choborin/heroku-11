@@ -5,10 +5,10 @@ const app = express();
 app.use(express.static('public'));
 
 const connection = mysql.createConnection({
-  host: 'db',
-  user: 'choborin',
-  password: 'beckham7',
-  database: 'chobodb'
+  host: 'us-cdbr-east-04.cleardb.com',
+  user: 'b8220a503bdb55',
+  password: '1edf7fa8',
+  database: 'heroku_2a57bf75d9bde8c'
 });
 
 app.get('/', (req, res) => {
