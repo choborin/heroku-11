@@ -9,10 +9,10 @@ services:
       - /var/nodeapp/node_modules
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_ROOT_PASSWORD: bechobockham7
-      MYSQL_DATABASE: chobodb
-      MYSQL_USER: choborin
-      MYSQL_PASSWORD: beckham7 
+      MYSQL_ROOT_PASSWORD: $DB_ROOTPASS
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USERNAME
+      MYSQL_PASSWORD: $DB_PASSWORD 
   web:
     build: .
     depends_on:
@@ -27,9 +27,9 @@ services:
     environment:
       MYSQL_SERVER: mysql
       MYSQL_HOST: db
-      MYSQL_NAME: chobodb
-      MYSQL_USER: choborin
-      MYSQL_PASSWORD: beckham7 
+      MYSQL_NAME: $DB_NAME
+      MYSQL_USER: $DB_USERNAME
+      MYSQL_PASSWORD: $DB_PASSWORD 
     tty: true 
 networks:
   choborin_net:
