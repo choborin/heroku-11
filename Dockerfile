@@ -14,7 +14,7 @@ RUN npm install mysql
 
 RUN npm install -g nodemon
 
-RUN npm dotenv
+RUN npm install dotenv
 
 CMD npm start
 
