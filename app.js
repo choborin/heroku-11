@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
@@ -21,6 +22,6 @@ app.get('/', (req, res) => {
   );
 });
 
-app.listen(3000);
-console.log('Server start!');
+app.listen(PORT);
+console.log('Server start!!');
 
