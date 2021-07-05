@@ -1,14 +1,16 @@
 const express = require('express');
 const mysql = require('mysql');
+require('dotenv').config();
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
 const connection = mysql.createConnection({
-  host: 'choborin_mysql',
-  user: 'choborin',
-  password: 'beckham7',
-  database: 'chobodb'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 app.get('/', (req, res) => {
@@ -21,6 +23,6 @@ app.get('/', (req, res) => {
   );
 });
 
-app.listen(3000);
-console.log('Server start!');
+app.listen(PORT);
+console.log('Server start!!');
 
